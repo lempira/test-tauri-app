@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  CN_APPLICATION: ${{ github.event.inputs.app-slug || 'test-tauri-app' }}
+  CN_APPLICATION: ${{ github.event.inputs.app-slug || 'algorand-foundation/test-tauri-app' }}
 
 jobs:
   draft:
