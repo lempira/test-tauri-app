@@ -23,11 +23,11 @@ pub fn run() {
         .plugin(tauri_plugin_shell::init())
         .invoke_handler(tauri::generate_handler![greet])
         .setup(|_app| {
-            #[cfg(any(windows, target_os = "linux"))]
-            {
-                use tauri_plugin_deep_link::DeepLinkExt;
-                app.deep_link().register_all()?;
-            }
+            // #[cfg(any(windows, target_os = "linux"))]
+            // {
+            //     use tauri_plugin_deep_link::DeepLinkExt;
+            //     app.deep_link().register_all()?;
+            // }
             Ok(())
         })
         .run(tauri::generate_context!())
